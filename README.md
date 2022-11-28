@@ -3,35 +3,7 @@
 
 https://cat-couture-static-bdx0.onrender.com/
 
-**Contents:**
 
-- [03 Project - Cat Couture](#03-project---cat-couture)
-  - [Assessment details](#assessment-details)
-  - [Scenario](#scenario)
-  - [Brief](#brief)
-    - [Architecture Diagram](#architecture-diagram)
-  - [Getting Started](#getting-started)
-  - [Instructions](#instructions)
-    - [Part A - Planning](#part-a---planning)
-    - [Part B - Tests](#part-b---tests)
-    - [Part C - Development Process](#part-c---development-process)
-    - [Part D - User Experience](#part-d---user-experience)
-    - [Part E - Database Diagram](#part-e---database-diagram)
-    - [Part F - Fix Warnings](#part-f---fix-warnings)
-    - [Part G - Pagination](#part-g---pagination)
-    - [Part H - Content Access](#part-h---content-access)
-    - [Part I - OpenAPI](#part-i---openapi)
-    - [Part J - Deploy The App](#part-j---deploy-the-app)
-    - [Part K - Code Quality](#part-k---code-quality)
-
----
-
-## Assessment details
-
-- [Level 5 Learning Outcomes](./docs/learning-outcomes-l5.md)
-- [Level 6 Learning Outcomes](./docs/learning-outcomes-l6.md)
-
----
 
 ## Scenario
 
