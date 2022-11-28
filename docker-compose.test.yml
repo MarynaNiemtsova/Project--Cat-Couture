@@ -1,0 +1,27 @@
+version: "3"
+services:
+  supertest:
+    build:
+      context: ./server
+    environment:
+      - PGDATABASE=postgres
+      - PGHOST=test_db
+      - PGUSER=postgres
+      - PGPASSWORD=password
+      - PGPORT=5432
+      - AUTH0_AUDIENCE=test
+      - AUTH0_ISSUER_BASE_URL=test
+      - NODE_ENV=test
+    depends_on:
+      - test_db
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    entrypoint: ["npm", "test"]
+  test_db:
+    build:
+      context: ./db-test
+    volumes:
+      - test-db-volume:/var/lib/postgresql/data
+volumes:
+  test-db-volume:

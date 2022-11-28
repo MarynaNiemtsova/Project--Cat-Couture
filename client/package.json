@@ -1,0 +1,56 @@
+{
+  "name": "cat-couture",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "^1.8.0",
+    "@fortawesome/fontawesome-svg-core": "6.2.0",
+    "@fortawesome/free-solid-svg-icons": "6.2.0",
+    "@fortawesome/react-fontawesome": "0.2.0",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "msw": "^0.35.0",
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test --verbose --watchAll",
+    "eject": "react-scripts eject",
+    "prettier:check": "prettier --check '**/*.js'",
+    "lint:js": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "build/*"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

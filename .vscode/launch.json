@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker: Attach to Express Server",
+      "port": 9229,
+      "remoteRoot": "/app/",
+      "localRoot": "${workspaceFolder}/server/"
+    }
+  ]
+}

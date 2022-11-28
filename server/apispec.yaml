@@ -1,0 +1,178 @@
+openapi: "3.0.2"
+info:
+  version: "1.0"
+  title: Welcome to the Products API!
+  description: This API allows user to handle products
+servers:
+  - url: "http://localhost:5001/api"
+    description: Development server
+  - url: "https://cat-couture-static-bdx0.onrender.com/api"
+    description: Production server
+paths:
+  /products:
+    get:
+      summary: Returns a list of products
+      description: Get a list of products
+      operationId: get-products
+      tags:
+        - products
+      parameters:
+        - schema:
+            type: integer
+            minimum: 1
+          in: query
+          name: limit
+          description: The number of products to return
+          required: false
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  products:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Product'
+                  currentPage:
+                    type: integer
+                  itemsPerPage:
+                    type: integer
+                  totalItems:
+                    type: integer
+                  totalPages:
+                    type: integer
+                required:
+                  - products
+                  - currentPage
+                  - totalPages
+                  - itemsPerPage
+                  - totalItems
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /reports:
+    get:
+      summary: Returns a list of reports
+      description: Get a list of reports
+      operationId: get-reports
+      security:
+        - bearerAuth: []
+      tags:
+        - reports
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categoryReport:
+                    items:
+                      $ref: '#/components/schemas/categoryReport'
+                  discountReport:
+                    items:
+                      $ref: '#/components/schemas/discountReport'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "403":
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        categoryName:
+          type: string
+          nullable: true
+        imageName:
+          type: string
+          nullable: true
+        imageDescription:
+          type: string
+          nullable: true
+        productDiscount:
+          type: number
+          nullable: true
+        discountType:
+          type: string
+          nullable: true
+      required:
+        - id
+        - name
+        - description
+        - price
+        - categoryName
+        - imageName
+        - imageDescription
+        - productDiscount
+        - discountType
+    categoryReport:
+      type: object
+      properties:
+        categoryName:
+          type: string
+        discountedProduct:
+          type: number
+        totalProducts:
+          type: number
+      required:
+        - categoryName
+        - totalProducts
+    discountReport:
+      type: object
+      properties:
+        discountType:
+          type: string
+          nullable: true
+          enum: [percentage off, fixed amount off, null]
+        totalProducts:
+          type: number
+      required:
+        - totalProducts
+        - discountType
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+tags:
+  - name: products

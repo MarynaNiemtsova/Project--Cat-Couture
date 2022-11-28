@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon --inspect=0.0.0.0:9229 index.js",
+    "test": "jest --watchAll --colors --verbose",
+    "lint:js": "eslint .",
+    "prettier:check": "prettier --check '**/*.js'"
+  },
+  "author": "DI",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-oauth2-jwt-bearer": "^1.2.0",
+    "joi": "^17.4.2",
+    "js-yaml": "^4.1.0",
+    "pg": "^8.7.1",
+    "swagger-ui-express": "4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "jest": "^27.3.1",
+    "jest-openapi": "^0.14.0",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "supertest": "^6.1.6"
+  }
+}

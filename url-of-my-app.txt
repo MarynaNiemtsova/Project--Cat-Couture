@@ -1,0 +1,2 @@
+static URL:https://cat-couture-static-bdx0.onrender.com
+web service URL: https://cat-couture-node-dftz.onrender.com

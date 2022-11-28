@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "React Tests",
+      "setup": "npm install --prefix client",
+      "run": "npm test --prefix client",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 3,
+      "points": null
+    },
+    {
+      "name": "Prettier Check - Client",
+      "setup": "npm install --prefix client",
+      "run": "npm run --prefix client prettier:check",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Prettier Check - Server",
+      "setup": "npm install --prefix server",
+      "run": "npm run --prefix server prettier:check",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Lint JS - Server",
+      "setup": "npm install --prefix server",
+      "run": "npm run --prefix server lint:js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Lint JS - Client",
+      "setup": "npm install --prefix client",
+      "run": "npm run --prefix client lint:js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
