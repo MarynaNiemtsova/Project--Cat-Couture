@@ -3,8 +3,8 @@
 
 https://cat-couture-static-bdx0.onrender.com/
 
-![img](./Screen Shot 1.png)
-![img](./Screen Shot 2.png)
+![img](./Screen-Shot-1.png)
+![img](./Screen-Shot-2.png)
 
 ## Scenario
 
